@@ -1,0 +1,43 @@
+body{
+    background-color:#85f7f1cb;
+}
+.inputbutton{
+  background: #3498db;
+  color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding:13px 18px;
+  margin: 20px 0px;
+}
+label{
+    font-size:20px;
+}
+input[type=text],input[type=password], select {
+    width: 100%;
+    padding: 8px 13px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    
+  }
+.login {
+    padding: 2em;
+    margin: 3em auto;
+    width: 25em;
+    height: 20em;
+    background: #fff;
+    border-radius: 3px;
+  }
+  .inputlogin{
+      margin-left:130px;
+  }
+h1{
+    text-align:center;
+}
+h1.title{
+    text-align:center;
+    font-size:50px;
+    color:white;
+}
