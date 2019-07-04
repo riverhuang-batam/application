@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="index.css">
 </head>
-<body style="background-color:blue;">
+<body>
 
 </body>
 </html>

@@ -1,4 +1,4 @@
 <?php 
-$con = mysqli_connect("localhost","root","","riverdatabase");
+$con = mysqli_connect("localhost","root","","databasebegginner_db");
 
 ?>

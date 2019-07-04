@@ -4,7 +4,7 @@ body{
 .inputbutton{
   background: #3498db;
   color: #fff;
-  border: 1px solid #ccc;
+  border: 2px solid rgb(238, 179, 179);
   border-radius: 4px;
   padding:13px 18px;
   margin: 20px 0px;
@@ -26,8 +26,9 @@ input[type=text],input[type=password], select {
     padding: 2em;
     margin: 3em auto;
     width: 25em;
-    height: 20em;
+    height: 25em;
     background: #fff;
+    border: 2px solid rgb(238, 179, 179);
     border-radius: 3px;
   }
   .inputlogin{
