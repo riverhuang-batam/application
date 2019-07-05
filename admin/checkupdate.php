@@ -12,7 +12,7 @@ if(isset($_POST['save'])){
     $jk = $_POST['stock'];
 
 
-    $sql = "UPDATE product_tb SET productname='$nama', harga_barang='$alamat', stock='$jk' WHERE kode_barang=$id";
+    $sql = "UPDATE product_tb SET productname='$nama', price='$price', stock='$stock' WHERE id=$id";
     $query = mysqli_query($con, $sql);
 
     // apakah query update berhasil?

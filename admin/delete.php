@@ -1,9 +1,9 @@
 <?php
-include 'config.php';
+include 'connect.php';
 // menyimpan data id kedalam variabel
-$id_mahasiswa   = $_GET['id'];
+$id   = $_GET['id'];
 // query SQL untuk insert data
-$query="DELETE from barang_tb where kode_barang='$id_mahasiswa'";
-mysqli_query($koneksi, $query);
+$query="DELETE from product_tb where id='$id'";
+mysqli_query($con, $query);
 header("location:index.php");
 ?>

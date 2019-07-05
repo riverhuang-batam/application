@@ -1,5 +1,5 @@
 <?php 
-include '../config.php';
+include '../connect.php';
  
 // mengaktifkan session
 session_start();
@@ -19,7 +19,8 @@ echo "<b> Hai, selamat datang ".$_SESSION['username'];
 
 <html>
 <head>
- <title>Admin</title>
+<link rel="stylesheet" href="./../index.css">
+ <title>Rivershop</title>
  <style>
  .table1 {
     font-family: sans-serif;
@@ -64,7 +65,7 @@ echo "<b> Hai, selamat datang ".$_SESSION['username'];
 
 <form action="insert.php" method="post">
 
-					<input type="submit" value="Insert" class = "tombol">
+					<input type="submit" value="Insert" class = "inputbutton">
 
 </td></tr>
 
@@ -72,33 +73,32 @@ echo "<b> Hai, selamat datang ".$_SESSION['username'];
 
  <table style="width:100%" class="table1">
   <tr>
-   <th>Kode</th>
-   <th>Nama</th>
-   <th>Harga</th>
-   <th>Stok</th>
-   <th>Pilihan</th>
+   <th>Id</th>
+   <th>Product Name</th>
+   <th>Price</th>
+   <th>Stock</th>
   </tr>
   
   <?php
-  $koneksi = mysqli_connect("localhost","root","");
-  $database = mysqli_select_db($koneksi, "databasebegginner_db");  
+  $con = mysqli_connect("localhost","root","");
+  $database = mysqli_select_db($con, "databasebegginner_db");  
   
   $no = 1;
-  $data = mysqli_query($koneksi,"select * from product_tb");
+  $data = mysqli_query($con,"select * from product_tb");
   while($r = mysqli_fetch_array($data)){
-   $id_barang = $r['kode_barang'];
-   $nama_barang = $r['nama_barang'];
-   $harga_barang = $r['harga_barang'];
-   $stok_barang = $r['stock'];
+   $id = $r['id'];
+   $productname = $r['productname'];
+   $price = $r['price'];
+   $stock = $r['stock'];
         ?>
 
-   <td><?php echo $id_barang; ?></td>
-   <td><?php echo $nama_barang; ?></td>
-   <td><?php echo $harga_barang; ?></td>
-   <td><?php echo $stok_barang; ?></td>
+   <td><?php echo $id; ?></td>
+   <td><?php echo $productname; ?></td>
+   <td><?php echo $price; ?></td>
+   <td><?php echo $stock; ?></td>
    <td>
-<a href = "delete.php?kode_barang=<?php echo $r['kode_barang']; ?> "  type="button" class ="tombol">Delete</a>
-<a href = "update.php?kode_barang=<?php echo $r['kode_barang']; ?> "  type="button" class ="tombol">Update</a>
+<a href = "delete.php?id=<?php echo $r['id']; ?> "  type="button" class ="inputbutton">Delete</a>
+<a href = "update.php?id=<?php echo $r['id']; ?> "  type="button" class ="inputbutton">Update</a>
 </td>
   </tr>
   <?php 

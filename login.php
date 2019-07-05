@@ -13,11 +13,11 @@
             <form action="index.php" method="post">
                 <label>Username</label>
                 <br/>
-                <input type="text"/>
+                <input type="text" name="username" id="username"/>
                 <br/>
                 <label>Password</label>
                 <br/>
-                <input type="password"/>
+                <input type="password"name="password" id="password"/>
                 <br/>
                 <div class="inputlogin">
                     <input type="submit" name="login" value="login" class="inputbutton"/>
