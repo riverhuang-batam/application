@@ -1,6 +1,4 @@
-body{
-    background-color:#85f7f1cb;
-}
+
 .inputbutton{
   background: #3498db;
   color: #fff;
@@ -25,13 +23,13 @@ input[type=text],input[type=password], select {
 .login {
     padding: 2em;
     margin: 3em auto;
-    width: 25em;
+    width: 40em;
     height: 25em;
     background: #fff;
     border: 2px solid rgb(238, 179, 179);
     border-radius: 3px;
   }
-  .inputlogin{
+.inputlogin{
       margin-left:130px;
   }
 h1{
