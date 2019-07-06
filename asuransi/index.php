@@ -57,7 +57,7 @@ echo "<a> Hai, selamat datang ".$_SESSION['username'];
  </style>
 </head>
 <body style="text-align:center"><hr />
- <h1>Tabel Barang</h1>
+ <h1>Insurance Table</h1>
 <hr />
 <tr><td>
 
@@ -72,9 +72,9 @@ echo "<a> Hai, selamat datang ".$_SESSION['username'];
  <table style="width:100%" class="table1">
   <tr>
    <th>Id</th>
-   <th>Product Name</th>
+   <th>Date</th>
+   <th>Insurance</th>
    <th>Price</th>
-   <th>Stock</th>
    <th>Edit</th>
   </tr>
 
@@ -83,18 +83,18 @@ echo "<a> Hai, selamat datang ".$_SESSION['username'];
   $database = mysqli_select_db($con, "databasebegginner_db"); 
 
   $no = 1;
-  $data = mysqli_query($con,"select * from product_tb");
+  $data = mysqli_query($con,"select * from insurance_tb");
   while($r = mysqli_fetch_array($data)){
    $id = $r['id'];
-   $productname = $r['productname'];
+   $date = $r['date'];
+   $insurancename = $r['insurancename'];
    $price = $r['price'];
-   $stock = $r['stock'];
         ?>
 
    <td><?php echo $id; ?></td>
-   <td><?php echo $productname; ?></td>
+   <td><?php echo $date; ?></td>
+   <td><?php echo $insurancename; ?></td>
    <td><?php echo $price; ?></td>
-   <td><?php echo $stock; ?></td>
    <td>
    <br/>
    <a class="inputbutton" style="text-color:white;" href="delete.php?id=<?php echo $r['id'];?>">Delete</a>

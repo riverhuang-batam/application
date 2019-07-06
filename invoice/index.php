@@ -95,7 +95,7 @@ echo "<a> Hai, selamat datang ".$_SESSION['username'];
    <td><?php echo $productname; ?></td>
    <td><?php echo $price; ?></td>
    <td><?php echo $stock; ?></td>
-   <td>
+   <td> 
    <br/>
    <a class="inputbutton" style="text-color:white;" href="delete.php?id=<?php echo $r['id'];?>">Delete</a>
    
