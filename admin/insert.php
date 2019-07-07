@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Register</title>
+	<title>River Shop</title>
 	<link rel="stylesheet" type="text/css" href="./../index.css">
 </head>
 <body>

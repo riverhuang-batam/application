@@ -19,7 +19,7 @@
                 <br/>
                 <input type="password"name="password" id="password"/>
                 <br/>
-                <div class="inputlogin">
+                <div style="margin-left:300px" class="inputlogin">
                     <input type="submit" name="login" value="login" class="inputbutton"/>
                     <input
                         type="submit"

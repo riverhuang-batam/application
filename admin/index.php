@@ -10,7 +10,7 @@ if($_SESSION['status'] !="login"){
 }
 
 // menampilkan pesan selamat datang
-echo "<a> Hai, selamat datang ".$_SESSION['username'];
+echo "<h3> Welcome ".$_SESSION['username'];
 ?>
 
 <button style="margin-left:1000px;" class ="inputbutton" onclick="window.location.href='logout.php'">LOGOUT</button>
@@ -57,15 +57,17 @@ echo "<a> Hai, selamat datang ".$_SESSION['username'];
  </style>
 </head>
 <body style="text-align:center"><hr />
- <h1>Tabel Barang</h1>
-<hr />
-<tr><td>
-
+ <h1 style="
+  background-image: linear-gradient(to bottom right, blue, red);">Product Table</h1>
+ <tr><td>
+ <hr />
 <form action="insert.php" method="post">
 
-	<input type="submit" value="Insert" class = "inputbutton">
+	<input style="margin-left:1200px" type="submit" value="Insert" class = "inputbutton">
 
 </td></tr>
+
+
 
 
 

@@ -7,12 +7,12 @@ if(isset($_POST['save'])){
 
     // ambil data dari formulir
     $id = $_POST['id'];
-    $nama = $_POST['productname'];
-    $price = $_POST['price'];
-    $stock = $_POST['stock'];
+    $nama = $_POST['customer_id'];
+    $invoice_date = $_POST['invoice_date'];
+ 
 
 
-    $sql = "UPDATE product_tb SET productname='$productname', price='$price', stock='$stock' WHERE id=$id";
+    $sql = "UPDATE product_tb SET customer_id='$customer_id', invoice_date='$invoice_date' WHERE id=$id";
     $query = mysqli_query($con, $sql);
 
     // apakah query update berhasil?

@@ -22,7 +22,7 @@ if( mysqli_num_rows($query) < 1 ){
 ?>
 <html>
 <head>
-	<title>Update</title>
+	<title>River Shop</title>
 	<link rel="stylesheet" type="text/css" href="./../index.css">
 </head>
 <body>

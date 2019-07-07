@@ -10,7 +10,7 @@ if( !isset($_GET['id']) ){
 $id = $_GET['id'];
 
 
-$sql = "SELECT * FROM product_tb WHERE id=$id";
+$sql = "SELECT * FROM invoice_tb WHERE id=$id";
 $query = mysqli_query($con, $sql);
 $seller = mysqli_fetch_assoc($query);
 
@@ -22,7 +22,7 @@ if( mysqli_num_rows($query) < 1 ){
 ?>
 <html>
 <head>
-	<title>Update</title>
+	<title>River Shop</title>
 	<link rel="stylesheet" type="text/css" href="./../index.css">
 </head>
 <body>
@@ -38,17 +38,13 @@ if( mysqli_num_rows($query) < 1 ){
 				<input type="text" name="id" id="id" readonly value="<?php echo $seller['id'] ?>" />
 			</div>
 			<div>
-				<label>Product Name:</label>
-				<input type="text" name="productname" id="productname" value ="<?php echo $seller['productname'] ?>" />
+				<label>Customer Id:</label>
+				<input type="text" name="customer_id" id="customer_id" value ="<?php echo $seller['customer_id'] ?>" />
 			</div>
 			<div>
-				<label>Price</label>
-				<input type="text" name="price" id="price" value ="<?php echo $seller['price'] ?>" />
+				<label>Invoice Date</label>
+				<input type="text" name="invoice_date" id="invoice_date" value ="<?php echo $seller['invoice_date'] ?>" />
 			</div>
-			<div>
-				<label>Stock:</label>
-				<input type="text" name="stock" id="stock" value ="<?php echo $seller['stock'] ?>"/>
-			</div>			
 			
 				<input type="submit" value="Register" class = "inputbutton" name = "save">
 			

@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Register</title>
+	<title>River Shop</title>
 	<link rel="stylesheet" type="text/css" href="./../index.css">
 </head>
 <body>
@@ -16,17 +16,13 @@
 				<input type="text" name="id" id="id" />
 			</div>
 			<div>
-				<label>Product Name:</label>
-				<input type="text" name="productname" id="productname" />
+				<label>Customer Id:</label>
+				<input type="text" name="customer_id" id="customer_id" />
 			</div>
 			<div>
-				<label>Price:</label>
-				<input type="text" name="price" id="price" />
+				<label>Invoice Date:</label>
+				<input type="date" name="invoice_date" id="invoice_date" />
 			</div>
-			<div>
-				<label>Stock:</label>
-				<input type="text" name="stock" id="stock" />
-			</div>			
 			
 				<input type="submit" value="Register" class = "inputbutton" name = "save">
 			

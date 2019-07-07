@@ -10,7 +10,7 @@ if($_SESSION['status'] !="login"){
 }
 
 // menampilkan pesan selamat datang
-echo "<a> Hai, selamat datang ".$_SESSION['username'];
+echo "<h3> Welcome ".$_SESSION['username'];
 ?>
 
 <button style="margin-left:1000px;" class ="inputbutton" onclick="window.location.href='logout.php'">LOGOUT</button>
@@ -18,7 +18,7 @@ echo "<a> Hai, selamat datang ".$_SESSION['username'];
 <html>
 <head>
 <link rel="stylesheet" href="./../index.css">
- <title>Rivershop</title>
+ <title>River Shop</title>
  <style>
  .table1 {
     font-family: sans-serif;
@@ -57,13 +57,14 @@ echo "<a> Hai, selamat datang ".$_SESSION['username'];
  </style>
 </head>
 <body style="text-align:center"><hr />
- <h1>Tabel Barang</h1>
+ <h1 style="
+  background-image: linear-gradient(to bottom right, blue, red);">Invoice</h1>
 <hr />
 <tr><td>
 
 <form action="insert.php" method="post">
 
-	<input type="submit" value="Insert" class = "inputbutton">
+	<input style="margin-left:1200px" type="submit" value="Insert" class = "inputbutton">
 
 </td></tr>
 
@@ -72,9 +73,8 @@ echo "<a> Hai, selamat datang ".$_SESSION['username'];
  <table style="width:100%" class="table1">
   <tr>
    <th>Id</th>
-   <th>Product Name</th>
-   <th>Price</th>
-   <th>Stock</th>
+   <th>Customer Id</th>
+   <th>Invoice Date</th>
    <th>Edit</th>
   </tr>
 
@@ -83,18 +83,16 @@ echo "<a> Hai, selamat datang ".$_SESSION['username'];
   $database = mysqli_select_db($con, "databasebegginner_db"); 
 
   $no = 1;
-  $data = mysqli_query($con,"select * from product_tb");
+  $data = mysqli_query($con,"select * from invoice_tb");
   while($r = mysqli_fetch_array($data)){
    $id = $r['id'];
-   $productname = $r['productname'];
-   $price = $r['price'];
-   $stock = $r['stock'];
+   $customer_id = $r['customer_id'];
+   $invoice_date = $r['invoice_date'];
         ?>
 
    <td><?php echo $id; ?></td>
-   <td><?php echo $productname; ?></td>
-   <td><?php echo $price; ?></td>
-   <td><?php echo $stock; ?></td>
+   <td><?php echo $customer_id; ?></td>
+   <td><?php echo $invoice_date; ?></td>
    <td> 
    <br/>
    <a class="inputbutton" style="text-color:white;" href="delete.php?id=<?php echo $r['id'];?>">Delete</a>

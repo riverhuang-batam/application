@@ -3,11 +3,10 @@ include 'connect.php';
 
 if (@$_POST['save']) {
   $id = @$_POST['id'];
-  $productname = @$_POST['productname'];
-  $price = @$_POST['price'];
-  $stock = @$_POST['stock'];
+  $customer_id = @$_POST['customer_id'];
+  $invoice_date = @$_POST['invoice_date'];
 
-  mysqli_query($con, "INSERT INTO product_tb (id,productname,price,stock) VALUES ('$id', '$productname','$price', '$stock')");
+  mysqli_query($con, "INSERT INTO invoice_tb (id,customer_id,invoice_date) VALUES ('$id', '$customer_id','$invoice_date')");
 
 ?>
 
