@@ -8,7 +8,11 @@
 <div class="login">
     <h1>Welcome!</h1>
     <form action="check_registration.php" method="post">
-      
+	  
+			<div>
+				<label>Id:</label>
+				<input type="text" name="id" id="id" />
+			</div>
 			<div>
 				<label>Username:</label>
 				<input type="text" name="username" id="username" />

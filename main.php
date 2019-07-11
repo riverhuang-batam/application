@@ -23,6 +23,11 @@
             <br/>
             <a class="inputbutton" style="text-color:white;" href="./orders/index.php">Orders</a>
             <a class="inputbutton" style="text-color:white;" href="./orders_detail/index.php">Orders Detail</a>
+            <a class="inputbutton" style="text-color:white;" href="./payment/index.php">Payment</a>
+            <br/>
+            <br/>
+            <br/>
+            <a class="inputbutton" style="text-color:white;" href="./customer/index.php">Customer</a>
             </div>
                 </div>
             </form>

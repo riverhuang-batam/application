@@ -21,7 +21,13 @@
 			</div>
 			<div>
 				<label>Invoice Date:</label>
-				<input type="date" name="invoice_date" id="invoice_date" />
+				<input style="width: 100%;
+  padding: 8px 13px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;" type="date" name="invoice_date" id="invoice_date" />
 			</div>
 			
 				<input type="submit" value="Register" class = "inputbutton" name = "save">

@@ -17,7 +17,13 @@
 			</div>
 			<div>
 				<label>Date:</label>
-				<input type="date" name="date" id="date" />
+				<input style="width: 100%;
+  padding: 8px 13px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;" type="date" name="date" id="date" />
 			</div>
 			<div>
 				<label>Insurance Name:</label>

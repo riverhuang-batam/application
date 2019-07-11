@@ -58,7 +58,7 @@ echo "<h3> Welcome ".$_SESSION['username'];
 </head>
 <body style="text-align:center"><hr />
  <h1 style="
-  background-image: linear-gradient(to bottom right, blue, red);">Invoice</h1>
+  background-image: linear-gradient(to bottom right, blue, red);">Payment</h1>
 <hr />
 <tr><td>
 
@@ -73,8 +73,9 @@ echo "<h3> Welcome ".$_SESSION['username'];
  <table style="width:100%" class="table1">
   <tr>
    <th>Id</th>
-   <th>Customer Id</th>
-   <th>Invoice Date</th>
+   <th>CheckNumber</th>
+   <th>Payment Date</th>
+   <th>Amount Paid</th>
    <th>Edit</th>
   </tr>
 
@@ -83,16 +84,18 @@ echo "<h3> Welcome ".$_SESSION['username'];
   $database = mysqli_select_db($con, "databasebegginner_db"); 
 
   $no = 1;
-  $data = mysqli_query($con,"select * from invoice_tb");
+  $data = mysqli_query($con,"select * from payment_tb");
   while($r = mysqli_fetch_array($data)){
    $id = $r['id'];
-   $customer_id = $r['customer_id'];
-   $invoice_date = $r['invoice_date'];
+   $checknumber = $r['checknumber'];
+   $paymentdate = $r['paymentdate'];
+   $amountpaid = $r['amountpaid'];
         ?>
 
    <td><?php echo $id; ?></td>
-   <td><?php echo $customer_id; ?></td>
-   <td><?php echo $invoice_date; ?></td>
+   <td><?php echo $checknumber; ?></td>
+   <td><?php echo $paymentdate; ?></td>
+   <td><?php echo $amountpaid; ?></td>
    <td> 
    <br/>
    <a class="inputbutton" style="text-color:white;" href="delete.php?id=<?php echo $r['id'];?>">Delete</a>

@@ -73,8 +73,9 @@ echo "<h3> Welcome ".$_SESSION['username'];
  <table style="width:100%" class="table1">
   <tr>
    <th>Id</th>
-   <th>Customer Id</th>
-   <th>Invoice Date</th>
+   <th>Fullname</th>
+   <th>Address</th>
+   <th>Phone</th>
    <th>Edit</th>
   </tr>
 
@@ -83,16 +84,18 @@ echo "<h3> Welcome ".$_SESSION['username'];
   $database = mysqli_select_db($con, "databasebegginner_db"); 
 
   $no = 1;
-  $data = mysqli_query($con,"select * from invoice_tb");
+  $data = mysqli_query($con,"select * from customer_tb");
   while($r = mysqli_fetch_array($data)){
    $id = $r['id'];
-   $customer_id = $r['customer_id'];
-   $invoice_date = $r['invoice_date'];
+   $fullname = $r['fullname'];
+   $address = $r['address'];
+   $phone = $r['phone'];
         ?>
 
    <td><?php echo $id; ?></td>
-   <td><?php echo $customer_id; ?></td>
-   <td><?php echo $invoice_date; ?></td>
+   <td><?php echo $fullname; ?></td>
+   <td><?php echo $address; ?></td>
+   <td><?php echo $phone; ?></td>
    <td> 
    <br/>
    <a class="inputbutton" style="text-color:white;" href="delete.php?id=<?php echo $r['id'];?>">Delete</a>

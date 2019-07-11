@@ -84,7 +84,7 @@ echo "<h3> Welcome ".$_SESSION['username'];
   $database = mysqli_select_db($con, "databasebegginner_db"); 
 
   $no = 1;
-  $data = mysqli_query($con,"select * orderdetail_tb");
+  $data = mysqli_query($con,"select * from orderdetail_tb");
   while($r = mysqli_fetch_array($data)){
    $id = $r['id'];
    $productname = $r['productname'];

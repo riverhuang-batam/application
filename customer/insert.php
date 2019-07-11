@@ -8,7 +8,7 @@
 	<br/>
 	<br/>
 	<div class="login">
-<center><b><font color = "#3498db" face="impact" size = "+2">Input Barang</font></b></center>
+<center><b><font color = "#3498db" face="impact" size = "+2">Input Customer</font></b></center>
 	<br/>
 		<form action="checkinsert.php" method="post">
 			<div>
@@ -16,12 +16,16 @@
 				<input type="text" name="id" id="id" />
 			</div>
 			<div>
-				<label>Customer Id:</label>
-				<input type="text" name="customer_id" id="customer_id" />
+				<label>Fullname:</label>
+				<input type="text" name="Fullname" id="Fullname" />
 			</div>
 			<div>
-				<label>Invoice Date:</label>
-				<input type="date" name="invoice_date" id="invoice_date" />
+				<label>Address:</label>
+				<input type="text" name="address" id="address" />
+			</div>
+			<div>
+				<label>Phone:</label>
+				<input type="text" name="phone" id="phone" />
 			</div>
 			
 				<input type="submit" value="Register" class = "inputbutton" name = "save">

@@ -10,7 +10,7 @@ if( !isset($_GET['id']) ){
 $id = $_GET['id'];
 
 
-$sql = "SELECT * FROM invoice_tb WHERE id=$id";
+$sql = "SELECT * FROM payment_tb WHERE id=$id";
 $query = mysqli_query($con, $sql);
 $seller = mysqli_fetch_assoc($query);
 
@@ -38,14 +38,17 @@ if( mysqli_num_rows($query) < 1 ){
 				<input type="text" name="id" id="id" readonly value="<?php echo $seller['id'] ?>" />
 			</div>
 			<div>
-				<label>Customer Id:</label>
-				<input type="text" name="customer_id" id="customer_id" value ="<?php echo $seller['customer_id'] ?>" />
+				<label>CheckNumber:</label>
+				<input type="text" name="checknumber" id="checknumber" value ="<?php echo $seller['checknumber'] ?>" />
 			</div>
 			<div>
-				<label>Invoice Date</label>
-				<input type="text" name="invoice_date" id="invoice_date" value ="<?php echo $seller['invoice_date'] ?>" />
+				<label>Payment Date</label>
+				<input type="text" name="paymentdate" id="paymentdate" value ="<?php echo $seller['paymentdate'] ?>" />
 			</div>
-			
+			<div>
+				<label>Amount Paid:</label>
+				<input type="text" name="amountpaid" id="amountpaid" readonly value="<?php echo $seller['amountpaid'] ?>" />
+			</div>
 				<input type="submit" value="Register" class = "inputbutton" name = "save">
 			
 		</form>
