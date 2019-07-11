@@ -22,7 +22,7 @@
 				<input type="text" name="email" id="email" />
 			</div>	
 			
-				<input type="submit" value="Register" class = "inputbutton" name = "register">
+				<input type="submit" value="Register" class = "inputbutton" name = "save">
 		
     </form>
 </div>

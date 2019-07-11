@@ -18,6 +18,11 @@
             <a class="inputbutton" style="text-color:white;" href="./asuransi/index.php">Insurance</a>
             
             <a class="inputbutton" style="text-color:white;" href="./invoice/index.php">Invoice</a>
+            <br/>
+            <br/>
+            <br/>
+            <a class="inputbutton" style="text-color:white;" href="./orders/index.php">Orders</a>
+            <a class="inputbutton" style="text-color:white;" href="./orders_detail/index.php">Orders Detail</a>
             </div>
                 </div>
             </form>

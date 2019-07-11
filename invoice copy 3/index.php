@@ -56,16 +56,15 @@ echo "<h3> Welcome ".$_SESSION['username'];
 }
  </style>
 </head>
-<body style="text-align:center;"
-><hr/>
+<body style="text-align:center"><hr />
  <h1 style="
-  background-image: linear-gradient(to bottom right, blue, red);" >Insurance Table</h1>
+  background-image: linear-gradient(to bottom right, blue, red);">Invoice</h1>
 <hr />
 <tr><td>
 
 <form action="insert.php" method="post">
 
-	<input style="margin-left:1200px"type="submit" value="Insert" class = "inputbutton">
+	<input style="margin-left:1200px" type="submit" value="Insert" class = "inputbutton">
 
 </td></tr>
 
@@ -74,9 +73,8 @@ echo "<h3> Welcome ".$_SESSION['username'];
  <table style="width:100%" class="table1">
   <tr>
    <th>Id</th>
-   <th>Date</th>
-   <th>Insurance</th>
-   <th>Price</th>
+   <th>Customer Id</th>
+   <th>Invoice Date</th>
    <th>Edit</th>
   </tr>
 
@@ -85,19 +83,17 @@ echo "<h3> Welcome ".$_SESSION['username'];
   $database = mysqli_select_db($con, "databasebegginner_db"); 
 
   $no = 1;
-  $data = mysqli_query($con,"select * from insurance_tb");
+  $data = mysqli_query($con,"select * from invoice_tb");
   while($r = mysqli_fetch_array($data)){
    $id = $r['id'];
-   $date = $r['date'];
-   $insurancename = $r['insurancename'];
-   $price = $r['price'];
+   $customer_id = $r['customer_id'];
+   $invoice_date = $r['invoice_date'];
         ?>
 
    <td><?php echo $id; ?></td>
-   <td><?php echo $date; ?></td>
-   <td><?php echo $insurancename; ?></td>
-   <td><?php echo $price; ?></td>
-   <td>
+   <td><?php echo $customer_id; ?></td>
+   <td><?php echo $invoice_date; ?></td>
+   <td> 
    <br/>
    <a class="inputbutton" style="text-color:white;" href="delete.php?id=<?php echo $r['id'];?>">Delete</a>
    
