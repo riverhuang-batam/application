@@ -58,7 +58,7 @@ echo "<h3> Welcome ".$_SESSION['username'];
 </head>
 <body style="text-align:center"><hr />
  <h1 style="
-  background-image: linear-gradient(to bottom right, blue, red);">Invoice</h1>
+  background-image: linear-gradient(to bottom right, blue, red);">Customer</h1>
 <hr />
 <tr><td>
 
